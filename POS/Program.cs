@@ -14,9 +14,14 @@ namespace POS
         [STAThread]
         static void Main()
         {
+            ListViewItem[] items = new ListViewItem[100];
+            for (int i = 0; i < 100; i++)
+            {
+                items[i] = new ListViewItem(new[] { $"{i}",$"N0000{i}","15","French Fries","2.3$",DateTime.Now.ToString(),DateTime.Now.ToString()});
+            }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new History.History(items));
         }
     }
 }
