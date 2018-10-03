@@ -7,9 +7,34 @@ namespace Billing
 {
     public partial class Receipt : Form
     {
-        public List<Bill> Bills { get; } = new List<Bill>();
+        List<Bill> bills;
+        Dictionary<string, object> infos;
+
         public Image LogoImage { get; set; } = null;
-        public Dictionary<string, object> Infos { get; } = new Dictionary<string, object>();
+        public Dictionary<string, object> Infos
+        {
+            get
+            {
+                if (this.infos == null)
+                {
+                    this.infos = new Dictionary<string, object>();
+                }
+                return this.infos;
+            }
+            set => this.infos = value;
+        }
+        public List<Bill> Bills
+        {
+            get
+            {
+                if (this.bills == null)
+                {
+                    this.bills = new List<Bill>();
+                }
+                return this.bills;
+            }
+            set => this.bills = value;
+        }
 
         public Receipt()
         {
@@ -57,8 +82,8 @@ namespace Billing
                 Panel Panel = new Panel();
                 Panel.Controls.AddRange(new Control[]
                 {
-                    this.CreateLabel(Info.Key, 5),
-                    this.CreateLabel($": {Info.Value}", 75)
+            this.CreateLabel(Info.Key, 5),
+            this.CreateLabel($": {Info.Value}", 75)
                 });
                 Panel.AutoSize = true;
                 Panel.Location = new Point(225 * (i % 2), 20 * (i / 2));
@@ -79,10 +104,10 @@ namespace Billing
                 Panel Panel = new Panel();
                 Panel.Controls.AddRange(new Control[]
                 {
-                    this.CreateLabel(B.Description, 5),
-                    this.CreateLabel(B.Quantity.ToString(), 223),
-                    this.CreateLabel(B.Price.ToString("0.00"), 275),
-                    this.CreateLabel(B.Amount.ToString("0.00"), 376),
+                this.CreateLabel(B.Description, 5),
+                this.CreateLabel(B.Quantity.ToString(), 223),
+                this.CreateLabel(B.Price.ToString("0.00"), 275),
+                this.CreateLabel(B.Amount.ToString("0.00"), 376),
                 });
                 Panel.AutoSize = true;
                 Panel.Location = new Point(0, 20 * i);
@@ -125,6 +150,15 @@ namespace Billing
             Label.Location = new Point(x, 0);
             Label.AutoSize = true;
             return Label;
+        }
+
+        public static DialogResult Show(Image image, Dictionary<string, object> infos, List<Bill> bills)
+        {
+            Receipt R = new Receipt();
+            R.LogoImage = image;
+            R.Infos = infos;
+            R.Bills = bills;
+            return R.ShowDialog();
         }
     }
 

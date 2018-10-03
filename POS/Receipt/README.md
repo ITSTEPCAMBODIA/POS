@@ -22,3 +22,19 @@ for (int i = 0; i < 5; i++)
 // show dialog
 R.ShowDialog();
 ```
+
+**example**
+```c#
+Dictionary<string, object> Infos = new Dictionary<string, object>();
+Infos["one"] = 123;
+Infos["two"] = "asdfasd";
+Infos["three"] = "faaoiwnsadfa";
+List<Bill> Bills = new List<Bill>();
+for (int i = 0; i < 5; i++)
+    Bills.Add(new Bill($"test {i}", i, 2.3));
+Receipt.Show(
+    Image.FromFile(@"C:\Users\Public\Pictures\Sample Pictures\Desert.jpg"),
+    Infos,
+    Bills
+);
+```
