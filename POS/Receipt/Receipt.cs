@@ -54,8 +54,14 @@ namespace Billing
             int i = 0;
             foreach (KeyValuePair<string, object> Info in this.Infos)
             {
-                Panel Panel = this.CreateInfoPanel(Info);
-                Panel.Location = new Point(0, 20 * i);
+                Panel Panel = new Panel();
+                Panel.Controls.AddRange(new Control[]
+                {
+                    this.CreateLabel(Info.Key, 5),
+                    this.CreateLabel($": {Info.Value}", 75)
+                });
+                Panel.AutoSize = true;
+                Panel.Location = new Point(225 * (i % 2), 20 * (i / 2));
                 Panel.Height = 20;
                 this.Info.Controls.Add(Panel);
                 i++;
@@ -70,7 +76,15 @@ namespace Billing
             int i = 0;
             foreach (Bill B in this.Bills)
             {
-                Panel Panel = this.CreateBillPanel(B);
+                Panel Panel = new Panel();
+                Panel.Controls.AddRange(new Control[]
+                {
+                    this.CreateLabel(B.Description, 5),
+                    this.CreateLabel(B.Quantity.ToString(), 223),
+                    this.CreateLabel(B.Price.ToString("0.00"), 275),
+                    this.CreateLabel(B.Amount.ToString("0.00"), 376),
+                });
+                Panel.AutoSize = true;
                 Panel.Location = new Point(0, 20 * i);
                 Panel.Height = 20;
                 this.Bill.Controls.Add(Panel);
@@ -111,32 +125,6 @@ namespace Billing
             Label.Location = new Point(x, 0);
             Label.AutoSize = true;
             return Label;
-        }
-
-        Panel CreateInfoPanel(KeyValuePair<string, object> info)
-        {
-            Panel Panel = new Panel();
-            Panel.Controls.AddRange(new Control[]
-            {
-                this.CreateLabel(info.Key, 5),
-                this.CreateLabel(info.Value.ToString(), 240)
-            });
-            Panel.AutoSize = true;
-            return Panel;
-        }
-
-        Panel CreateBillPanel(Bill bill)
-        {
-            Panel Panel = new Panel();
-            Panel.Controls.AddRange(new Control[]
-            {
-                this.CreateLabel(bill.Description, 5),
-                this.CreateLabel(bill.Quantity.ToString(), 223),
-                this.CreateLabel(bill.Price.ToString("0.00"), 275),
-                this.CreateLabel(bill.Amount.ToString("0.00"), 376),
-            });
-            Panel.AutoSize = true;
-            return Panel;
         }
     }
 
