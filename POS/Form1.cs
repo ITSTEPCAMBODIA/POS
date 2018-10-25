@@ -30,7 +30,7 @@ namespace POS
             string[] row = { "2", "God", "god" };
             ListViewItem item = new ListViewItem(row);
             item.Font = new Font("Microsoft Sans Serif", 8.25F);
-            //listName.Items.Add(item);
+            //listName.Items.Add(item); 
         }
     }
 }
