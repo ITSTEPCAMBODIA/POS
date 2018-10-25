@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Project1
+namespace POS
 {
     public partial class Keyboard : Form
     {
@@ -128,6 +128,18 @@ namespace Project1
             btnRightShift.Click += ShiftPress;
             btnSpace.Click += ButtonPress;
             this.FormClosing += Keyboard_FormClosing;
+            btnA.MouseDown += BtnA_MouseDown;
+            btnA.MouseUp += BtnA_MouseUp;
+        }
+
+        private void BtnA_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.OnMouseUp(e);
+        }
+
+        private void BtnA_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.OnMouseDown(e);
         }
 
         private void ShiftPress(object sender, EventArgs e)
@@ -1435,6 +1447,21 @@ namespace Project1
             this.Text = "Keyboard";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+        }
+
+        private void Keyboard_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.MouseMove += Keyboard_MouseMove;
+        }
+
+        private void Keyboard_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.Location = new Point(e.X, e.Y);
+        }
+
+        private void Keyboard_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.MouseMove -= Keyboard_MouseMove;
         }
     }
     public class Keypress : EventArgs

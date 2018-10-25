@@ -11,7 +11,7 @@ using System.Drawing.Drawing2D;
 using System.Xml.Serialization;
 using System.IO;
 
-namespace Project1
+namespace POS
 {
     public partial class AddDrinks : BaseForm
     {
@@ -74,6 +74,24 @@ namespace Project1
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.FormClosing -= new FormClosingEventHandler(AddDrinks_FormClosing);
+            try
+            {
+                XmlSerializer xml = new XmlSerializer(typeof(List<CategoryData>));
+                if (IsChangeCategory == false) throw new Exception("File not change");
+                using (FileStream file = new FileStream(Environment.CurrentDirectory + "\\Category.xml", FileMode.Create, FileAccess.Write))
+                {
+                    xml.Serialize(file, categories);
+                }
+            }
+            catch (ArgumentNullException ex)
+            {
+                MessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            catch (IOException ex)
+            {
+                MessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            catch (Exception) { }
             this.Close();
         }
 

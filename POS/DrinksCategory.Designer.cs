@@ -1,4 +1,4 @@
-﻿namespace Project1
+﻿namespace POS
 {
     partial class DrinksCategory
     {

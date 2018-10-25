@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddDrinkDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDrinkDialog.Designer.cs">
+      <DependentUpon>AddDrinkDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddDrinks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     <Compile Include="Receipt\Receipt.Designer.cs">
       <DependentUpon>Receipt.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddDrinkDialog.resx">
+      <DependentUpon>AddDrinkDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddDrinks.resx">
       <DependentUpon>AddDrinks.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +129,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Arrow_DOWN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Arrow_Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Arrow_Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Arrow_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DeleteButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="windowLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

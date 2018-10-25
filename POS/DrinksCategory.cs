@@ -11,7 +11,7 @@ using System.Drawing.Drawing2D;
 using System.Xml.Serialization;
 using System.IO;
 
-namespace Project1
+namespace POS
 {
     public partial class DrinksCategory : BaseForm
     {

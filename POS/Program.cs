@@ -19,7 +19,7 @@ namespace POS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Project1.AddDrinks());
+            Application.Run(new AddDrinks());
             /*Receipt R = new Receipt();
             // set logo
             //R.LogoImage = Image.FromFile(@"C:\Users\Public\Pictures\Sample Pictures\Desert.jpg");
