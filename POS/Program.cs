@@ -19,8 +19,8 @@ namespace POS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
-            Receipt R = new Receipt();
+            Application.Run(new Project1.AddDrinks());
+            /*Receipt R = new Receipt();
             // set logo
             //R.LogoImage = Image.FromFile(@"C:\Users\Public\Pictures\Sample Pictures\Desert.jpg");
             // set info
@@ -31,7 +31,7 @@ namespace POS
             for (int i = 0; i < 5; i++)
                 R.Bills.Add(new Bill($"test {i}", i, 2.3));
             // show dialog
-            R.ShowDialog();
+            R.ShowDialog();*/
             //Application.Run(R);
         }
     }
