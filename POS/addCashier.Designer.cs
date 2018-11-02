@@ -1,4 +1,4 @@
-﻿namespace POS
+namespace POS
 {
     partial class addCashier
     {
@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.age = new System.Windows.Forms.TextBox();
             this.birthDate = new System.Windows.Forms.DateTimePicker();
             this.sex = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -58,6 +61,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.age);
             this.panel1.Controls.Add(this.birthDate);
             this.panel1.Controls.Add(this.sex);
             this.panel1.Controls.Add(this.button3);
@@ -81,17 +87,50 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.image);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(-2, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(589, 373);
+            this.panel1.Size = new System.Drawing.Size(588, 370);
             this.panel1.TabIndex = 0;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.SystemColors.Control;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(143, 113);
+            this.label15.Margin = new System.Windows.Forms.Padding(0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(12, 17);
+            this.label15.TabIndex = 53;
+            this.label15.Text = ":";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.SystemColors.Control;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(16, 113);
+            this.label14.Margin = new System.Windows.Forms.Padding(5, 5, 3, 5);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(33, 17);
+            this.label14.TabIndex = 52;
+            this.label14.Text = "Age";
+            // 
+            // age
+            // 
+            this.age.Location = new System.Drawing.Point(158, 113);
+            this.age.MaxLength = 10;
+            this.age.Name = "age";
+            this.age.PasswordChar = '✡';
+            this.age.Size = new System.Drawing.Size(117, 20);
+            this.age.TabIndex = 51;
             // 
             // birthDate
             // 
             this.birthDate.CustomFormat = "";
             this.birthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.birthDate.Location = new System.Drawing.Point(158, 142);
+            this.birthDate.Location = new System.Drawing.Point(158, 168);
             this.birthDate.Name = "birthDate";
             this.birthDate.Size = new System.Drawing.Size(117, 20);
             this.birthDate.TabIndex = 50;
@@ -102,7 +141,7 @@
             this.sex.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.sex.Location = new System.Drawing.Point(158, 113);
+            this.sex.Location = new System.Drawing.Point(158, 139);
             this.sex.Name = "sex";
             this.sex.Size = new System.Drawing.Size(117, 21);
             this.sex.TabIndex = 46;
@@ -144,7 +183,7 @@
             // 
             // passWord
             // 
-            this.passWord.Location = new System.Drawing.Point(158, 194);
+            this.passWord.Location = new System.Drawing.Point(158, 220);
             this.passWord.MaxLength = 10;
             this.passWord.Name = "passWord";
             this.passWord.PasswordChar = '✡';
@@ -153,7 +192,7 @@
             // 
             // login
             // 
-            this.login.Location = new System.Drawing.Point(158, 168);
+            this.login.Location = new System.Drawing.Point(158, 194);
             this.login.MaxLength = 10;
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(117, 20);
@@ -180,7 +219,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.SystemColors.Control;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(143, 195);
+            this.label12.Location = new System.Drawing.Point(143, 221);
             this.label12.Margin = new System.Windows.Forms.Padding(0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(12, 17);
@@ -192,7 +231,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.SystemColors.Control;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(143, 168);
+            this.label13.Location = new System.Drawing.Point(143, 194);
             this.label13.Margin = new System.Windows.Forms.Padding(0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(12, 17);
@@ -204,7 +243,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.Control;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(143, 141);
+            this.label9.Location = new System.Drawing.Point(143, 167);
             this.label9.Margin = new System.Windows.Forms.Padding(0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(12, 17);
@@ -216,7 +255,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.SystemColors.Control;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(143, 114);
+            this.label11.Location = new System.Drawing.Point(143, 140);
             this.label11.Margin = new System.Windows.Forms.Padding(0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(12, 17);
@@ -252,7 +291,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.Control;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(16, 195);
+            this.label6.Location = new System.Drawing.Point(16, 221);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 5, 3, 5);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 17);
@@ -264,7 +303,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.Control;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(16, 168);
+            this.label7.Location = new System.Drawing.Point(16, 194);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 5, 3, 5);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(43, 17);
@@ -276,7 +315,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 141);
+            this.label3.Location = new System.Drawing.Point(16, 167);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 5, 3, 5);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 17);
@@ -288,7 +327,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(16, 114);
+            this.label4.Location = new System.Drawing.Point(16, 140);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 5, 3, 5);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 17);
@@ -337,12 +376,13 @@
             this.label1.Size = new System.Drawing.Size(170, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "New Cashier";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // addCashier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 369);
+            this.ClientSize = new System.Drawing.Size(584, 370);
             this.Controls.Add(this.panel1);
             this.Name = "addCashier";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -380,5 +420,8 @@
     private System.Windows.Forms.Button button3;
     private System.Windows.Forms.ComboBox sex;
     private System.Windows.Forms.DateTimePicker birthDate;
+    private System.Windows.Forms.Label label15;
+    private System.Windows.Forms.Label label14;
+    private System.Windows.Forms.TextBox age;
   }
 }
