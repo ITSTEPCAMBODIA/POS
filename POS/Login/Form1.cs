@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.Serialization;
+using System.IO;
 
 namespace POS.Login
 {
     public partial class Form1 : Form
     {
+        string repos = @"C:\Users\Acer\Desktop\POS";
+        //FileStream file = FileStream(, )
         public Form1()
         {
             InitializeComponent();
