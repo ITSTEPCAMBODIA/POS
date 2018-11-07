@@ -29,20 +29,18 @@ namespace POS
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.list_drink = new System.Windows.Forms.DataGridView();
-            this.cashier_Info_Display = new System.Windows.Forms.Panel();
             this.drink_Info_Display = new System.Windows.Forms.Panel();
             this.drink_note = new System.Windows.Forms.ListBox();
             this.drink_datetime = new System.Windows.Forms.Label();
@@ -67,6 +65,14 @@ namespace POS
             this.lable120 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.image_Drink = new System.Windows.Forms.PictureBox();
+            this.list_drink = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cashier_Info_Display = new System.Windows.Forms.Panel();
             this.lastOrderNo = new System.Windows.Forms.Label();
             this.loginDatetime = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -116,16 +122,11 @@ namespace POS
             this.newCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordersHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.list_drink)).BeginInit();
-            this.cashier_Info_Display.SuspendLayout();
             this.drink_Info_Display.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.image_Drink)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list_drink)).BeginInit();
+            this.cashier_Info_Display.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageShow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.list_cashier)).BeginInit();
             this.menuStrip2.SuspendLayout();
@@ -134,6 +135,7 @@ namespace POS
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.drink_Info_Display);
             this.panel1.Controls.Add(this.list_drink);
             this.panel1.Controls.Add(this.cashier_Info_Display);
             this.panel1.Controls.Add(this.list_cashier);
@@ -144,80 +146,6 @@ namespace POS
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1013, 459);
             this.panel1.TabIndex = 0;
-            // 
-            // list_drink
-            // 
-            this.list_drink.AllowUserToAddRows = false;
-            this.list_drink.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.list_drink.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.list_drink.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.list_drink.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.list_drink.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewButtonColumn1,
-            this.Column1});
-            this.list_drink.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.list_drink.Location = new System.Drawing.Point(0, 129);
-            this.list_drink.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
-            this.list_drink.MultiSelect = false;
-            this.list_drink.Name = "list_drink";
-            this.list_drink.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.list_drink.RowHeadersVisible = false;
-            this.list_drink.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.list_drink.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.list_drink.Size = new System.Drawing.Size(507, 332);
-            this.list_drink.TabIndex = 38;
-            this.list_drink.Visible = false;
-            // 
-            // cashier_Info_Display
-            // 
-            this.cashier_Info_Display.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cashier_Info_Display.Controls.Add(this.drink_Info_Display);
-            this.cashier_Info_Display.Controls.Add(this.lastOrderNo);
-            this.cashier_Info_Display.Controls.Add(this.loginDatetime);
-            this.cashier_Info_Display.Controls.Add(this.label12);
-            this.cashier_Info_Display.Controls.Add(this.Served2);
-            this.cashier_Info_Display.Controls.Add(this.label10);
-            this.cashier_Info_Display.Controls.Add(this.lastLogin2);
-            this.cashier_Info_Display.Controls.Add(this.loginDate);
-            this.cashier_Info_Display.Controls.Add(this.passWord);
-            this.cashier_Info_Display.Controls.Add(this.login);
-            this.cashier_Info_Display.Controls.Add(this.serve);
-            this.cashier_Info_Display.Controls.Add(this.hireDate);
-            this.cashier_Info_Display.Controls.Add(this.age);
-            this.cashier_Info_Display.Controls.Add(this.sex);
-            this.cashier_Info_Display.Controls.Add(this.fullName);
-            this.cashier_Info_Display.Controls.Add(this.label8);
-            this.cashier_Info_Display.Controls.Add(this.label7);
-            this.cashier_Info_Display.Controls.Add(this.label6);
-            this.cashier_Info_Display.Controls.Add(this.label5);
-            this.cashier_Info_Display.Controls.Add(this.label4);
-            this.cashier_Info_Display.Controls.Add(this.label3);
-            this.cashier_Info_Display.Controls.Add(this.label2);
-            this.cashier_Info_Display.Controls.Add(this.label1);
-            this.cashier_Info_Display.Controls.Add(this.textLastLogin);
-            this.cashier_Info_Display.Controls.Add(this.textPassword);
-            this.cashier_Info_Display.Controls.Add(this.textLogin);
-            this.cashier_Info_Display.Controls.Add(this.textServe);
-            this.cashier_Info_Display.Controls.Add(this.textHiredDate);
-            this.cashier_Info_Display.Controls.Add(this.textAge);
-            this.cashier_Info_Display.Controls.Add(this.textSex);
-            this.cashier_Info_Display.Controls.Add(this.textName);
-            this.cashier_Info_Display.Controls.Add(this.titleText);
-            this.cashier_Info_Display.Controls.Add(this.imageShow);
-            this.cashier_Info_Display.Location = new System.Drawing.Point(507, 27);
-            this.cashier_Info_Display.Name = "cashier_Info_Display";
-            this.cashier_Info_Display.Size = new System.Drawing.Size(506, 434);
-            this.cashier_Info_Display.TabIndex = 37;
             // 
             // drink_Info_Display
             // 
@@ -245,7 +173,7 @@ namespace POS
             this.drink_Info_Display.Controls.Add(this.lable120);
             this.drink_Info_Display.Controls.Add(this.label41);
             this.drink_Info_Display.Controls.Add(this.image_Drink);
-            this.drink_Info_Display.Location = new System.Drawing.Point(0, 0);
+            this.drink_Info_Display.Location = new System.Drawing.Point(9, 173);
             this.drink_Info_Display.Margin = new System.Windows.Forms.Padding(0);
             this.drink_Info_Display.Name = "drink_Info_Display";
             this.drink_Info_Display.Size = new System.Drawing.Size(506, 434);
@@ -529,6 +457,147 @@ namespace POS
             this.image_Drink.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.image_Drink.TabIndex = 36;
             this.image_Drink.TabStop = false;
+            // 
+            // list_drink
+            // 
+            this.list_drink.AllowUserToAddRows = false;
+            this.list_drink.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.list_drink.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.list_drink.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.list_drink.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.list_drink.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewButtonColumn1,
+            this.Column1,
+            this.Column4});
+            this.list_drink.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.list_drink.Location = new System.Drawing.Point(0, 129);
+            this.list_drink.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.list_drink.MultiSelect = false;
+            this.list_drink.Name = "list_drink";
+            this.list_drink.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.list_drink.RowHeadersVisible = false;
+            this.list_drink.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.list_drink.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.list_drink.Size = new System.Drawing.Size(507, 260);
+            this.list_drink.TabIndex = 38;
+            this.list_drink.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.NullValue = "editing";
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewTextBoxColumn1.HeaderText = "";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn1.Width = 40;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewTextBoxColumn2.FillWeight = 110F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Drink Code";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn2.Width = 130;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Drink Name";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn3.Width = 135;
+            // 
+            // dataGridViewButtonColumn1
+            // 
+            this.dataGridViewButtonColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewButtonColumn1.HeaderText = "Price ($)";
+            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewButtonColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewButtonColumn1.Width = 80;
+            // 
+            // Column1
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.NullValue = "editing";
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Column1.HeaderText = "Edit";
+            this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column1.Width = 60;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Delete";
+            this.Column4.Name = "Column4";
+            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column4.Width = 60;
+            // 
+            // cashier_Info_Display
+            // 
+            this.cashier_Info_Display.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cashier_Info_Display.Controls.Add(this.lastOrderNo);
+            this.cashier_Info_Display.Controls.Add(this.loginDatetime);
+            this.cashier_Info_Display.Controls.Add(this.label12);
+            this.cashier_Info_Display.Controls.Add(this.Served2);
+            this.cashier_Info_Display.Controls.Add(this.label10);
+            this.cashier_Info_Display.Controls.Add(this.lastLogin2);
+            this.cashier_Info_Display.Controls.Add(this.loginDate);
+            this.cashier_Info_Display.Controls.Add(this.passWord);
+            this.cashier_Info_Display.Controls.Add(this.login);
+            this.cashier_Info_Display.Controls.Add(this.serve);
+            this.cashier_Info_Display.Controls.Add(this.hireDate);
+            this.cashier_Info_Display.Controls.Add(this.age);
+            this.cashier_Info_Display.Controls.Add(this.sex);
+            this.cashier_Info_Display.Controls.Add(this.fullName);
+            this.cashier_Info_Display.Controls.Add(this.label8);
+            this.cashier_Info_Display.Controls.Add(this.label7);
+            this.cashier_Info_Display.Controls.Add(this.label6);
+            this.cashier_Info_Display.Controls.Add(this.label5);
+            this.cashier_Info_Display.Controls.Add(this.label4);
+            this.cashier_Info_Display.Controls.Add(this.label3);
+            this.cashier_Info_Display.Controls.Add(this.label2);
+            this.cashier_Info_Display.Controls.Add(this.label1);
+            this.cashier_Info_Display.Controls.Add(this.textLastLogin);
+            this.cashier_Info_Display.Controls.Add(this.textPassword);
+            this.cashier_Info_Display.Controls.Add(this.textLogin);
+            this.cashier_Info_Display.Controls.Add(this.textServe);
+            this.cashier_Info_Display.Controls.Add(this.textHiredDate);
+            this.cashier_Info_Display.Controls.Add(this.textAge);
+            this.cashier_Info_Display.Controls.Add(this.textSex);
+            this.cashier_Info_Display.Controls.Add(this.textName);
+            this.cashier_Info_Display.Controls.Add(this.titleText);
+            this.cashier_Info_Display.Controls.Add(this.imageShow);
+            this.cashier_Info_Display.Location = new System.Drawing.Point(507, 27);
+            this.cashier_Info_Display.Name = "cashier_Info_Display";
+            this.cashier_Info_Display.Size = new System.Drawing.Size(506, 434);
+            this.cashier_Info_Display.TabIndex = 37;
             // 
             // lastOrderNo
             // 
@@ -943,6 +1012,7 @@ namespace POS
             this.list_cashier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.list_cashier.Size = new System.Drawing.Size(506, 402);
             this.list_cashier.TabIndex = 36;
+            this.list_cashier.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.list_cashier_CellContentClick);
             // 
             // number
             // 
@@ -950,25 +1020,32 @@ namespace POS
             this.number.DefaultCellStyle = dataGridViewCellStyle8;
             this.number.HeaderText = "";
             this.number.Name = "number";
+            this.number.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.number.Width = 40;
             // 
             // cashierName
             // 
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.cashierName.DefaultCellStyle = dataGridViewCellStyle9;
             this.cashierName.FillWeight = 110F;
             this.cashierName.HeaderText = "Cashier Name";
             this.cashierName.Name = "cashierName";
             this.cashierName.ReadOnly = true;
+            this.cashierName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.cashierName.Width = 190;
             // 
             // Column2
             // 
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.Column2.DefaultCellStyle = dataGridViewCellStyle10;
             this.Column2.HeaderText = "Login";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Column2.Width = 155;
             // 
             // button
@@ -980,17 +1057,20 @@ namespace POS
             this.button.DefaultCellStyle = dataGridViewCellStyle11;
             this.button.HeaderText = "Edit";
             this.button.Name = "button";
+            this.button.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.button.Text = "";
             this.button.Width = 60;
             // 
             // Column3
             // 
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle12.NullValue = "delete";
             this.Column3.DefaultCellStyle = dataGridViewCellStyle12;
             this.Column3.HeaderText = "Delete";
             this.Column3.Name = "Column3";
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column3.Width = 60;
             // 
@@ -1079,64 +1159,6 @@ namespace POS
             this.manageTableToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.manageTableToolStripMenuItem.Text = "Manage Table";
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.NullValue = "editing";
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTextBoxColumn1.HeaderText = "";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn1.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewTextBoxColumn2.FillWeight = 110F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Drink Code";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 130;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Drink Name";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 135;
-            // 
-            // dataGridViewButtonColumn1
-            // 
-            this.dataGridViewButtonColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridViewButtonColumn1.HeaderText = "Price ($)";
-            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewButtonColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewButtonColumn1.Width = 80;
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.NullValue = "editing";
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Column1.HeaderText = "Edit";
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column1.Width = 60;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1147,12 +1169,12 @@ namespace POS
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.list_drink)).EndInit();
-            this.cashier_Info_Display.ResumeLayout(false);
-            this.cashier_Info_Display.PerformLayout();
             this.drink_Info_Display.ResumeLayout(false);
             this.drink_Info_Display.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.image_Drink)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list_drink)).EndInit();
+            this.cashier_Info_Display.ResumeLayout(false);
+            this.cashier_Info_Display.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageShow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.list_cashier)).EndInit();
             this.menuStrip2.ResumeLayout(false);
@@ -1236,16 +1258,17 @@ namespace POS
     private System.Windows.Forms.PictureBox image_Drink;
     private System.Windows.Forms.DataGridView list_drink;
     private System.Windows.Forms.DataGridView list_cashier;
-    private System.Windows.Forms.DataGridViewTextBoxColumn number;
-    private System.Windows.Forms.DataGridViewTextBoxColumn cashierName;
-    private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-    private System.Windows.Forms.DataGridViewButtonColumn button;
-    private System.Windows.Forms.DataGridViewButtonColumn Column3;
     private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewButtonColumn1;
     private System.Windows.Forms.DataGridViewButtonColumn Column1;
+    private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+    private System.Windows.Forms.DataGridViewTextBoxColumn number;
+    private System.Windows.Forms.DataGridViewTextBoxColumn cashierName;
+    private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+    private System.Windows.Forms.DataGridViewButtonColumn button;
+    private System.Windows.Forms.DataGridViewButtonColumn Column3;
   }
 }
 

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ArrayOfData_Cashier xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <data_Cashier>
+    <set_firstName>Logan</set_firstName>
+    <set_age>20</set_age>
+    <set_hiredate>11/07/2018</set_hiredate>
+    <set_served>0</set_served>
+    <set_Cashier_Login>Veat</set_Cashier_Login>
+    <set_password>12345</set_password>
+    <set_id>1</set_id>
+    <set_lastLogin />
+    <set_sex>Male</set_sex>
+    <set_Image>G:\Image\__59a4b67c6f493.jpg</set_Image>
+  </data_Cashier>
+</ArrayOfData_Cashier>

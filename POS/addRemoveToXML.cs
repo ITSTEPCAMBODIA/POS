@@ -16,7 +16,7 @@ namespace POS
     {
       cashier = new List<addCashier>();
       xs = new XmlSerializer(typeof(List<addCashier>));
-      inFoEmployee info = new inFoEmployee();
+      data_Cashier info = new data_Cashier();
       //Console.WriteLine(info.textfirstname);
     }
     public void addToXml()

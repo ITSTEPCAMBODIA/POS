@@ -21,13 +21,12 @@ namespace POS
     public int Served { get; set; }
     public string last_login { get; set; }
     public string User_age { get; set; }
-    public int ID { get; set; }
 
-    XmlSerializer xml = new XmlSerializer(typeof(inFoEmployee));
-    List<inFoEmployee> employee = new List<inFoEmployee>();
     OpenFileDialog file = new OpenFileDialog();
-    XmlTextReader read = new XmlTextReader("G:\\Employee.Xml");
-    TextWriter CreateFile = new StreamWriter("G:\\Employee.Xml");
+    //XmlSerializer xml = new XmlSerializer(typeof(data_Cashier));
+    //List<data_Cashier> employee = new List<data_Cashier>();
+    //XmlTextReader read = new XmlTextReader("G:\\Employee.Xml");
+    //TextWriter CreateFile = new StreamWriter("G:\\Employee.Xml");
 
     public addCashier()
     {
@@ -48,7 +47,7 @@ namespace POS
 
     private void button2_Click(object sender, EventArgs e)
     {
-      //this.Close();
+      this.Close();
       //XmlSerializer xml = new XmlSerializer(typeof(inFoEmployee));
       //List<inFoEmployee> employee = new List<inFoEmployee>();
       //FileStream repos = new FileStream("G:\\Employee.Xml", FileMode.Open, FileAccess.Read);
@@ -67,30 +66,31 @@ namespace POS
 
     private void button1_Click(object sender, EventArgs e)
     {
-      //if (firstName.Text == "" || lastName.Text == "" || sex.Text == "" || birthDate.Text == "" || login.Text == "" || passWord.Text == "")
-      //{
-      //  MessageBox.Show("Please fill out all your all information!!!");
-      //}
-      //else
-      //{
-      textfirstname = "Corn";
-      textLastname = "Da Veat";
-      textSex = "Male";
-      textBirthDate = birthDate.Text;
-      //Endline
-      hired_Date = DateTime.Now.ToString("MM/dd/yyyy");
-      textLogin = "Daveat";
-      textPassword = "12345";
-      textImage = file.FileName;
-      Served = 1;
-      ID = 1;
-      User_age = "19";
-      textImage = file.FileName;
-      this.Close();
-      //employee.Add(info);
-      //xml.Serialize(CreateFile, info);
-      //CreateFile.Close();
-      //}
+      if (firstName.Text == "" || lastName.Text == "" || sex.Text == "" || birthDate.Text == "" || login.Text == "" || passWord.Text == "" || file.FileName == "")
+      {
+        MessageBox.Show("Please fill out all your all information!!!");
+      }
+      else
+      {
+        textfirstname = firstName.Text;
+        textLastname = lastName.Text;
+        textSex = sex.Text;
+        textBirthDate = birthDate.Text;
+        //Endline
+        hired_Date = DateTime.Now.ToString("MM/dd/yyyy");
+        textLogin = login.Text;
+        textPassword = passWord.Text;
+        textImage = file.FileName;
+        Served = 0;
+        User_age = age.Text;
+        textImage = file.FileName;
+        DialogResult = DialogResult.OK;
+        last_login = "";
+        this.Close();
+        //employee.Add(info);
+        //xml.Serialize(CreateFile, info);
+        //CreateFile.Close();
+      }
     }
   }
 }
