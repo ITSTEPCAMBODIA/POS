@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
+
 
 namespace POS
 {
-    public partial class AddDrinkDialog : Form
+    public partial class OrderDrinks : Form
     {
-        public AddDrinkDialog()
+        public OrderDrinks()
         {
             InitializeComponent();
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

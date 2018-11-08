@@ -35,7 +35,6 @@ namespace POS
             OpenFileDialog file = new OpenFileDialog();
             file.RestoreDirectory = true;
             file.ShowDialog();
-            file.RestoreDirectory = true;
             try
             {
                 pbDrink.Image = Image.FromFile(file.FileName);

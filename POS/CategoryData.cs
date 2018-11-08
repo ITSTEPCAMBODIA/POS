@@ -7,7 +7,6 @@ using System.Xml.Serialization;
 
 namespace POS
 {
-    
     public class CategoryData
     {
         private string code;

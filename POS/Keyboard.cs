@@ -124,6 +124,7 @@ namespace POS
             btnZero.Click += ButtonPress;
             btnSub.Click += ButtonPress;
             btnDel.Click += DeletePress;
+            btnDot.Click += ButtonPress;
             btnLeftShift.Click += ShiftPress;
             btnRightShift.Click += ShiftPress;
             btnSpace.Click += ButtonPress;
@@ -485,7 +486,7 @@ namespace POS
             this.btnDot.TabIndex = 57;
             this.btnDot.Text = ".";
             this.btnDot.UseVisualStyleBackColor = false;
-            this.btnDot.Enabled = false;
+            this.btnDot.Enabled = true;
             // 
             // btnSpace
             // 
