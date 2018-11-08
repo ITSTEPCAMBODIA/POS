@@ -75,6 +75,7 @@
     <EmbeddedResource Include="Receipt\Receipt.resx">
       <DependentUpon>Receipt.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\POS.Table_selection.Table.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
