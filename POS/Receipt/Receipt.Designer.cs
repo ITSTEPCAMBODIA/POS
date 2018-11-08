@@ -30,6 +30,7 @@
         {
             this.Logo = new System.Windows.Forms.PictureBox();
             this.InfoGrp = new System.Windows.Forms.GroupBox();
+            this.Info = new System.Windows.Forms.Panel();
             this.BillGrp = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.USD = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.Info = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.InfoGrp.SuspendLayout();
             this.BillGrp.SuspendLayout();
@@ -61,18 +61,30 @@
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Logo.TabIndex = 0;
             this.Logo.TabStop = false;
+            this.Logo.Click += new System.EventHandler(this.Logo_Click);
             // 
             // InfoGrp
             // 
             this.InfoGrp.AutoSize = true;
             this.InfoGrp.Controls.Add(this.Info);
             this.InfoGrp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoGrp.Location = new System.Drawing.Point(12, 93);
+            this.InfoGrp.Location = new System.Drawing.Point(15, 93);
             this.InfoGrp.Name = "InfoGrp";
-            this.InfoGrp.Size = new System.Drawing.Size(458, 38);
+            this.InfoGrp.Size = new System.Drawing.Size(457, 76);
             this.InfoGrp.TabIndex = 2;
             this.InfoGrp.TabStop = false;
             this.InfoGrp.Text = "INFO";
+            this.InfoGrp.Enter += new System.EventHandler(this.InfoGrp_Enter);
+            // 
+            // Info
+            // 
+            this.Info.AutoSize = true;
+            this.Info.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Info.Location = new System.Drawing.Point(7, 26);
+            this.Info.Name = "Info";
+            this.Info.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.Info.Size = new System.Drawing.Size(438, 24);
+            this.Info.TabIndex = 0;
             // 
             // BillGrp
             // 
@@ -80,7 +92,7 @@
             this.BillGrp.Controls.Add(this.panel1);
             this.BillGrp.Controls.Add(this.Bill);
             this.BillGrp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BillGrp.Location = new System.Drawing.Point(12, 188);
+            this.BillGrp.Location = new System.Drawing.Point(13, 201);
             this.BillGrp.Name = "BillGrp";
             this.BillGrp.Size = new System.Drawing.Size(458, 74);
             this.BillGrp.TabIndex = 3;
@@ -210,17 +222,6 @@
             this.label11.Size = new System.Drawing.Size(40, 19);
             this.label11.TabIndex = 0;
             this.label11.Text = "USD";
-            // 
-            // Info
-            // 
-            this.Info.AutoSize = true;
-            this.Info.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Info.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Info.Location = new System.Drawing.Point(3, 25);
-            this.Info.Name = "Info";
-            this.Info.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.Info.Size = new System.Drawing.Size(452, 10);
-            this.Info.TabIndex = 0;
             // 
             // Receipt
             // 

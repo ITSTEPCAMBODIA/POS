@@ -160,6 +160,16 @@ namespace Billing
             R.Bills = bills;
             return R.ShowDialog();
         }
+
+        private void InfoGrp_Enter(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void Logo_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 
     public class Bill
