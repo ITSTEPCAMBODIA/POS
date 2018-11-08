@@ -1,6 +1,6 @@
 ﻿namespace SettlePayment
 {
-    partial class CashReg
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -223,10 +223,10 @@
             // 
             // ENTER
             // 
-            this.ENTER.BackColor = System.Drawing.Color.DarkGray;
+            this.ENTER.BackColor = System.Drawing.Color.YellowGreen;
             this.ENTER.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ENTER.Font = new System.Drawing.Font("Segoe UI Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ENTER.ForeColor = System.Drawing.Color.White;
+            this.ENTER.ForeColor = System.Drawing.Color.Black;
             this.ENTER.Location = new System.Drawing.Point(385, 525);
             this.ENTER.Name = "ENTER";
             this.ENTER.Size = new System.Drawing.Size(187, 100);
@@ -237,7 +237,7 @@
             // 
             // button14
             // 
-            this.button14.BackColor = System.Drawing.Color.DarkGray;
+            this.button14.BackColor = System.Drawing.Color.Firebrick;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button14.Font = new System.Drawing.Font("Segoe UI Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.White;
@@ -414,6 +414,7 @@
             this.Name = "Form1";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cash Registration";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);

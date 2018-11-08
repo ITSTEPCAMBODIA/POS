@@ -10,21 +10,24 @@ using System.Windows.Forms;
 
 namespace SettlePayment
 {
-    public partial class CashReg : Form
+    public partial class Form1 : Form
     {
         public static double DollarGrandTotal = 23.2 , RielGrandTotal = DollarGrandTotal*4000;
+
         public double RielChange, DollarChange;
         public double RielCashReceived, DollarCashReceived;
+
         public void Compute()
         {
-            //double RielCashReceived, DollarCashReceived;
+            // convert textbox contents to string
             string RCR = Convert.ToString(textBox1.Text);
             string DCR = Convert.ToString(textBox2.Text);
 
-
+            // convert the string to double
             RielCashReceived = Convert.ToDouble(RCR);
             DollarCashReceived = Convert.ToDouble(DCR);
 
+            // display CHANGE Amount
             if (radioButton1.Checked)
             {
                 RielChange = RielCashReceived - RielGrandTotal;
@@ -38,12 +41,11 @@ namespace SettlePayment
             {
                 DollarChange = DollarCashReceived - DollarGrandTotal;
                 label6.Text = $"$ {DollarChange}";
-                //label9.Text = "";
             }
             
         }
         
-        public CashReg()
+        public Form1()
         {
             InitializeComponent();
 
@@ -54,7 +56,7 @@ namespace SettlePayment
             label7.Text = $"៛ {(int)(RielGrandTotal / 1000)},{RielGrandTotal % 1000}";
         }     
         
-        #region Number Button Clicks
+        #region NumberButton is Clicked
         private void button1_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
@@ -62,13 +64,14 @@ namespace SettlePayment
                 if (textBox1.Text == "0.00" && textBox1.Text != null)
                 {
                     textBox1.Text = "1.00";
-                    textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 3);
+                    textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 3); // erase the ".00" from displaying
                 }
                 else
                 {
                     textBox1.Text = textBox1.Text + "1";
                 }
             }
+
             if (radioButton2.Checked)
             {
                 if (textBox2.Text == "0.00" && textBox2.Text != null)
@@ -98,6 +101,7 @@ namespace SettlePayment
                     textBox1.Text = textBox1.Text + "2";
                 }
             }
+
             if (radioButton2.Checked)
             {
                 if (textBox2.Text == "0.00" && textBox2.Text != null)
@@ -110,7 +114,6 @@ namespace SettlePayment
                     textBox2.Text = textBox2.Text + "2";
                 }
             }
-            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -127,6 +130,7 @@ namespace SettlePayment
                     textBox1.Text = textBox1.Text + "3";
                 }
             }
+
             if (radioButton2.Checked)
             {
                 if (textBox2.Text == "0.00" && textBox2.Text != null)
@@ -155,6 +159,7 @@ namespace SettlePayment
                     textBox1.Text = textBox1.Text + "4";
                 }
             }
+
             if (radioButton2.Checked)
             {
                 if (textBox2.Text == "0.00" && textBox2.Text != null)
@@ -183,6 +188,7 @@ namespace SettlePayment
                     textBox1.Text = textBox1.Text + "5";
                 }
             }
+
             if (radioButton2.Checked)
             {
                 if (textBox2.Text == "0.00" && textBox2.Text != null)
@@ -211,6 +217,7 @@ namespace SettlePayment
                     textBox1.Text = textBox1.Text + "6";
                 }
             }
+
             if (radioButton2.Checked)
             {
                 if (textBox2.Text == "0.00" && textBox2.Text != null)
@@ -239,6 +246,7 @@ namespace SettlePayment
                     textBox1.Text = textBox1.Text + "7";
                 }
             }
+
             if (radioButton2.Checked)
             {
                 if (textBox2.Text == "0.00" && textBox2.Text != null)
@@ -267,6 +275,7 @@ namespace SettlePayment
                     textBox1.Text = textBox1.Text + "8";
                 }
             }
+
             if (radioButton2.Checked)
             {
                 if (textBox2.Text == "0.00" && textBox2.Text != null)
@@ -279,7 +288,6 @@ namespace SettlePayment
                     textBox2.Text = textBox2.Text + "8";
                 }
             }
-            
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -296,6 +304,7 @@ namespace SettlePayment
                     textBox1.Text = textBox1.Text + "9";
                 }
             }
+
             if (radioButton2.Checked)
             {
                 if (textBox2.Text == "0.00" && textBox2.Text != null)
@@ -308,7 +317,6 @@ namespace SettlePayment
                     textBox2.Text = textBox2.Text + "9";
                 }
             }
-            
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -325,6 +333,7 @@ namespace SettlePayment
                     textBox1.Text = textBox1.Text + "0";
                 }
             }
+
             if (radioButton2.Checked)
             {
                 if (textBox2.Text == "0.00" && textBox2.Text != null)
@@ -337,7 +346,6 @@ namespace SettlePayment
                     textBox2.Text = textBox2.Text + "0";
                 }
             }
-            
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -354,6 +362,7 @@ namespace SettlePayment
                     textBox1.Text = textBox1.Text + "00";
                 }
             }
+
             if (radioButton2.Checked)
             {
                 if (textBox2.Text == "0" && textBox2.Text != null)
@@ -366,7 +375,6 @@ namespace SettlePayment
                     textBox2.Text = textBox2.Text + "00";
                 }
             }
-            
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -382,6 +390,7 @@ namespace SettlePayment
                     textBox1.Text = textBox1.Text + ".";
                 }
             }
+
             if (radioButton2.Checked)
             {
                 if (textBox2.Text == "0" && textBox2.Text != null)
@@ -393,11 +402,11 @@ namespace SettlePayment
                     textBox2.Text = textBox2.Text + ".";
                 }
             }
-            
         }
         #endregion
 
-        #region Radio Button Switch
+
+        #region Radio Button Switches
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton2.Checked)
@@ -406,6 +415,7 @@ namespace SettlePayment
                 textBox2.Focus();
             }
         }
+
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
@@ -416,7 +426,8 @@ namespace SettlePayment
         }
         #endregion
 
-        #region Text Box Change 
+
+        #region If TextBox Changes, Then Compute 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
             Compute();
@@ -427,7 +438,8 @@ namespace SettlePayment
         }
         #endregion
 
-        //Delete Button
+
+        #region Delete Button
         private void button15_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
@@ -455,8 +467,10 @@ namespace SettlePayment
                 }
             }
         }
+        #endregion
 
-        //Enter Button
+
+        #region Enter Button
         private void button13_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
@@ -465,19 +479,36 @@ namespace SettlePayment
                 {
                     MessageBox.Show("Insufficient Cash", "Proceeding Error");
                 }
-                else MessageBox.Show($"Cash Received = ៛{RielCashReceived}\nChange = ៛{RielChange}", "Proceeded");
+                else
+                {
+                    DialogResult r = MessageBox.Show($"Cash Received = ៛{RielCashReceived}\nChange = ៛{RielChange}", "Proceeded", MessageBoxButtons.OK);
+                    if (r==DialogResult.OK)
+                    {
+                        Close();
+                    }
+                }
             }
+
             if (radioButton2.Checked)
             {
                 if (DollarChange < 0)
                 {
                     MessageBox.Show("Insufficient Cash", "Proceeding Error");
                 }
-                else MessageBox.Show($"Cash Received = ${DollarCashReceived}\nChange = ${DollarChange}", "Proceeded");
+                else
+                {
+                    DialogResult r = MessageBox.Show($"Cash Received = ${DollarCashReceived}\nChange = ${DollarChange}", "Proceeded", MessageBoxButtons.OK);
+                    if (r == DialogResult.OK)
+                    {
+                        Close();
+                    }
+                }
             }
         }
+        #endregion
 
-        //C Button
+
+        #region 'C' Button
         private void C_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
@@ -488,6 +519,7 @@ namespace SettlePayment
                 }
                 textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
             }
+
             if (radioButton2.Checked)
             {
                 if (textBox2.Text.Length == 1)
@@ -496,15 +528,20 @@ namespace SettlePayment
                 }
                 textBox2.Text = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
             }
-            
         }
-        
-        //Cancel Button
+        #endregion
+
+
+        #region Cancel Button
         private void button14_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult result = MessageBox.Show("Are you sure to quit?", "Confirmation", MessageBoxButtons.OKCancel);
+            if (result == DialogResult.OK)
+            {
+                Close();
+            }
         }
-
+        #endregion
 
 
         private void panel1_Paint(object sender, PaintEventArgs e)
