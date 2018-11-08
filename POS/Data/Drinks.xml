@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<ArrayOfDrinkInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DrinkInfo>
+    <Code>001</Code>
+    <Name>Americano</Name>
+    <Category>HOT</Category>
+    <Price>23</Price>
+    <Note>is very hot</Note>
+  </DrinkInfo>
+  <DrinkInfo>
+    <Code>C001</Code>
+    <Name>Latte</Name>
+    <Category>COLD</Category>
+    <Price>3.21</Price>
+    <Note />
+  </DrinkInfo>
+  <DrinkInfo>
+    <Code>H002</Code>
+    <Name>latte</Name>
+    <Category>HOT</Category>
+    <Price>3.34</Price>
+    <Note />
+    <Path>E:\PROJECT\DrinkSelections\DrinkSelections\Images\Caramel Latte.jpg</Path>
+  </DrinkInfo>
+  <DrinkInfo>
+    <Code>F001</Code>
+    <Name>Caramel Frappe</Name>
+    <Category>Frappe</Category>
+    <Price>3.25</Price>
+    <Note />
+    <Path>C:\Users\SoSak\source\repos\POS\POS\bin\Debug\DrinkImg\Frappe\Caramel Frappe.jpg</Path>
+  </DrinkInfo>
+  <DrinkInfo>
+    <Code>231</Code>
+    <Name>DRF</Name>
+    <Category>HOT</Category>
+    <Price>1</Price>
+    <Note />
+  </DrinkInfo>
+  <DrinkInfo>
+    <Code>12</Code>
+    <Name>ESD</Name>
+    <Category>HOT</Category>
+    <Price>2</Price>
+    <Note />
+    <Path>C:\Users\SoSak\source\repos\POS\POS\bin\Debug\DrinkImg\Frappe\Caramel_Frappe.jpg</Path>
+  </DrinkInfo>
+</ArrayOfDrinkInfo>

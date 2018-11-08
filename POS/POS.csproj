@@ -123,6 +123,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Receipt\Receipt.resx">
       <DependentUpon>Receipt.cs</DependentUpon>
@@ -158,6 +159,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="windowLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\DrinkImg\HomeButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\DrinkImg\HomeButtonImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\Category.xml" />
+    <Content Include="Data\Drinks.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ArrayOfCategoryData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CategoryData>
+    <Code>AAA</Code>
+    <Name>HOT</Name>
+  </CategoryData>
+  <CategoryData>
+    <Code>002</Code>
+    <Name>COLD</Name>
+  </CategoryData>
+  <CategoryData>
+    <Code>003</Code>
+    <Name>Frappe</Name>
+  </CategoryData>
+</ArrayOfCategoryData>

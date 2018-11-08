@@ -12,18 +12,12 @@ namespace POS
 {
     public partial class AddDrinkDialog : Form
     {
-        string Drinkname { get; set; }
         string DrinkSize { get; set; }
+        public string Drinkname { get; set; }
         public AddDrinkDialog()
         {
             InitializeComponent();
         }
-        public AddDrinkDialog(string DrinkName)
-        {
-            InitializeComponent();
-            this.Drinkname = Drinkname;
-        }
-
         private void btnOK_Click(object sender, EventArgs e)
         {
             OrderList list = new OrderList();
