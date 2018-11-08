@@ -14,14 +14,14 @@ namespace POS
     List<addCashier> cashier;
     public addRemoveToXML()
     {
-      cashier = new List<addCashier>();
-      xs = new XmlSerializer(typeof(List<addCashier>));
-      data_Cashier info = new data_Cashier();
+      //cashier = new List<addCashier>();
+      //xs = new XmlSerializer(typeof(List<addCashier>));
+      //data_Cashier info = new data_Cashier();
       //Console.WriteLine(info.textfirstname);
     }
     public void addToXml()
     {
-      FileStream fs = new FileStream("C:\\Users\\Daveth\\Desktop\\POS\\POS\bin\\Debug", FileMode.Create, FileAccess.Write);
+      //FileStream fs = new FileStream("C:\\Users\\Daveth\\Desktop\\POS\\POS\bin\\Debug", FileMode.Create, FileAccess.Write);
     }
   }
 }

@@ -486,6 +486,7 @@ namespace POS
             this.list_drink.Name = "list_drink";
             this.list_drink.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.list_drink.RowHeadersVisible = false;
+            this.list_drink.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.list_drink.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.list_drink.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.list_drink.Size = new System.Drawing.Size(507, 260);
@@ -607,9 +608,8 @@ namespace POS
             this.lastOrderNo.Location = new System.Drawing.Point(152, 393);
             this.lastOrderNo.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.lastOrderNo.Name = "lastOrderNo";
-            this.lastOrderNo.Size = new System.Drawing.Size(27, 20);
+            this.lastOrderNo.Size = new System.Drawing.Size(0, 20);
             this.lastOrderNo.TabIndex = 67;
-            this.lastOrderNo.Text = "99";
             // 
             // loginDatetime
             // 
@@ -619,9 +619,8 @@ namespace POS
             this.loginDatetime.Location = new System.Drawing.Point(152, 371);
             this.loginDatetime.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.loginDatetime.Name = "loginDatetime";
-            this.loginDatetime.Size = new System.Drawing.Size(89, 20);
+            this.loginDatetime.Size = new System.Drawing.Size(0, 20);
             this.loginDatetime.TabIndex = 66;
-            this.loginDatetime.Text = "30/09/2018";
             // 
             // label12
             // 
@@ -679,9 +678,8 @@ namespace POS
             this.loginDate.Location = new System.Drawing.Point(387, 232);
             this.loginDate.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.loginDate.Name = "loginDate";
-            this.loginDate.Size = new System.Drawing.Size(89, 20);
+            this.loginDate.Size = new System.Drawing.Size(0, 20);
             this.loginDate.TabIndex = 61;
-            this.loginDate.Text = "30/09/2018";
             // 
             // passWord
             // 
@@ -691,9 +689,8 @@ namespace POS
             this.passWord.Location = new System.Drawing.Point(387, 210);
             this.passWord.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.passWord.Name = "passWord";
-            this.passWord.Size = new System.Drawing.Size(57, 20);
+            this.passWord.Size = new System.Drawing.Size(0, 20);
             this.passWord.TabIndex = 60;
-            this.passWord.Text = "********";
             // 
             // login
             // 
@@ -703,9 +700,8 @@ namespace POS
             this.login.Location = new System.Drawing.Point(387, 188);
             this.login.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(60, 20);
+            this.login.Size = new System.Drawing.Size(0, 20);
             this.login.TabIndex = 59;
-            this.login.Text = "Daveat";
             // 
             // serve
             // 
@@ -715,9 +711,8 @@ namespace POS
             this.serve.Location = new System.Drawing.Point(387, 146);
             this.serve.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.serve.Name = "serve";
-            this.serve.Size = new System.Drawing.Size(59, 20);
+            this.serve.Size = new System.Drawing.Size(0, 20);
             this.serve.TabIndex = 58;
-            this.serve.Text = "Served";
             // 
             // hireDate
             // 
@@ -727,9 +722,8 @@ namespace POS
             this.hireDate.Location = new System.Drawing.Point(387, 124);
             this.hireDate.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.hireDate.Name = "hireDate";
-            this.hireDate.Size = new System.Drawing.Size(89, 20);
+            this.hireDate.Size = new System.Drawing.Size(0, 20);
             this.hireDate.TabIndex = 57;
-            this.hireDate.Text = "03/01/2018";
             // 
             // age
             // 
@@ -739,9 +733,8 @@ namespace POS
             this.age.Location = new System.Drawing.Point(387, 102);
             this.age.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.age.Name = "age";
-            this.age.Size = new System.Drawing.Size(27, 20);
+            this.age.Size = new System.Drawing.Size(0, 20);
             this.age.TabIndex = 56;
-            this.age.Text = "19";
             // 
             // sex
             // 
@@ -751,9 +744,8 @@ namespace POS
             this.sex.Location = new System.Drawing.Point(387, 80);
             this.sex.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.sex.Name = "sex";
-            this.sex.Size = new System.Drawing.Size(43, 20);
+            this.sex.Size = new System.Drawing.Size(0, 20);
             this.sex.TabIndex = 55;
-            this.sex.Text = "Male";
             // 
             // fullName
             // 
@@ -763,9 +755,8 @@ namespace POS
             this.fullName.Location = new System.Drawing.Point(387, 58);
             this.fullName.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.fullName.Name = "fullName";
-            this.fullName.Size = new System.Drawing.Size(106, 20);
+            this.fullName.Size = new System.Drawing.Size(0, 20);
             this.fullName.TabIndex = 54;
-            this.fullName.Text = "Corn Da Veat";
             // 
             // label8
             // 
@@ -1008,11 +999,13 @@ namespace POS
             this.list_cashier.Name = "list_cashier";
             this.list_cashier.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.list_cashier.RowHeadersVisible = false;
+            this.list_cashier.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.list_cashier.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.list_cashier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.list_cashier.Size = new System.Drawing.Size(506, 402);
             this.list_cashier.TabIndex = 36;
             this.list_cashier.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.list_cashier_CellContentClick);
+            this.list_cashier.SelectionChanged += new System.EventHandler(this.list_cashier_SelectionChanged);
             // 
             // number
             // 

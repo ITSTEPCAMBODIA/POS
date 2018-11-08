@@ -31,7 +31,22 @@ namespace POS
     public addCashier()
     {
       InitializeComponent();
+      textImage = "";
       //image.Image = Image.FromFile("");
+    }
+    public addCashier(string nameFirst, string nameLast, string sexUser, string birth, string userlogin, string password, string ageUser, string imagetext)
+    {
+      InitializeComponent();
+      firstName.Text = nameFirst;
+      lastName.Text = nameLast;
+      sex.Text = sexUser;
+      birthDate.Text = birth;
+      login.Text = userlogin;
+      passWord.Text = password;
+      age.Text = ageUser;
+      textImage = imagetext;
+      image.SizeMode = PictureBoxSizeMode.StretchImage;
+      image.Image = Image.FromFile(imagetext);
     }
 
     private void button3_Click(object sender, EventArgs e)
@@ -66,7 +81,7 @@ namespace POS
 
     private void button1_Click(object sender, EventArgs e)
     {
-      if (firstName.Text == "" || lastName.Text == "" || sex.Text == "" || birthDate.Text == "" || login.Text == "" || passWord.Text == "" || file.FileName == "")
+      if (firstName.Text == "" || lastName.Text == "" || sex.Text == "" || birthDate.Text == "" || login.Text == "" || passWord.Text == "" || textImage == "")
       {
         MessageBox.Show("Please fill out all your all information!!!");
       }
@@ -80,10 +95,9 @@ namespace POS
         hired_Date = DateTime.Now.ToString("MM/dd/yyyy");
         textLogin = login.Text;
         textPassword = passWord.Text;
-        textImage = file.FileName;
         Served = 0;
         User_age = age.Text;
-        textImage = file.FileName;
+        if (file.FileName != "") { textImage = file.FileName; }
         DialogResult = DialogResult.OK;
         last_login = "";
         this.Close();

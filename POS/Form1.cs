@@ -19,7 +19,8 @@ namespace POS
     addCashier cashier;
     addDrink drink = new addDrink();
     List<data_Cashier> add_Cashier = new List<data_Cashier>();
-    XmlSerializer write = new XmlSerializer(typeof(List<data_Cashier>));
+    XmlSerializer xml = new XmlSerializer(typeof(List<data_Cashier>));
+    DialogResult result;
     string path = @"C:\Users\Daveth\Desktop\POS\dataCashier.xml";
     int increaseId;
     public Form1()
@@ -28,22 +29,31 @@ namespace POS
       increaseId = 1;
       if (File.Exists(path))
       {
-        //add_Cashier
-      }
+        cashier = new addCashier();
+        FileStream file = new FileStream(path, FileMode.Open, FileAccess.Read);
+        add_Cashier = (List<data_Cashier>)xml.Deserialize(file);
+        for (int i = 0; i < add_Cashier.Count; i++)
+        {
+          add_Cashier_into_Row(add_Cashier[i].set_id, add_Cashier[i].set_firstName + " " + add_Cashier[i].set_lastName, add_Cashier[i].set_Cashier_Login);
+        }
+        list_cashier.Rows[0].Selected = false;
+        increaseId = add_Cashier.Count;
+        file.Close();
+      } 
     }
     private void newCashierToolStripMenuItem_Click(object sender, EventArgs e)
     {
+      FileStream file = new FileStream(path, FileMode.Create, FileAccess.Write);
       data_of_cashier = new data_Cashier();
       cashier = new addCashier();
-      DialogResult result = cashier.ShowDialog();
-      FileStream file = new FileStream(path, FileMode.Create, FileAccess.Write);
-      if ( result == DialogResult.OK )
+      if (cashier.ShowDialog() == DialogResult.OK )
       {
         set_data_cashier();
         Set_Info_Cashier_For_Display();
         add_Cashier_into_Row(data_of_cashier.set_id, data_of_cashier.set_firstName + " " + data_of_cashier.set_lastName, data_of_cashier.set_Cashier_Login);
         add_Cashier.Add(data_of_cashier);
-        write.Serialize(file, add_Cashier);
+        Console.WriteLine(add_Cashier.Count);
+        xml.Serialize(file, add_Cashier);
         file.Close();
         increaseId++;
       }
@@ -66,7 +76,6 @@ namespace POS
       list_drink.Rows.Add("1", "123", "Ice latte", "2", "");
         //list_drink.Rows.Add(drink.number_no, drink.drinkCode, drink.drinkName, drink.Price, "");
       SetInfoDrink();
-      list_drink.Rows[0].Selected = false;
       //}
       //Console.WriteLine((List<inFoEmployee>)xml.Deserialize(f));
       //dataGridView1.DataSource = cashiers;
@@ -78,7 +87,7 @@ namespace POS
     }
     void Set_Info_Cashier_For_Display()
     {
-      fullName.Text = data_of_cashier.set_firstName + " " + data_of_cashier.set_lastLogin;
+      fullName.Text = data_of_cashier.set_firstName + " " + data_of_cashier.set_lastName;
       sex.Text = data_of_cashier.set_sex;
       age.Text = data_of_cashier.set_age;
       hireDate.Text = data_of_cashier.set_hiredate;
@@ -93,7 +102,7 @@ namespace POS
     {
       data_of_cashier.set_id = increaseId;
       data_of_cashier.set_firstName = cashier.textfirstname;
-      data_of_cashier.set_lastLogin = cashier.textLastname;
+      data_of_cashier.set_lastName = cashier.textLastname;
       data_of_cashier.set_age = cashier.User_age;
       data_of_cashier.set_sex = cashier.textSex;
       data_of_cashier.set_hiredate = cashier.hired_Date;
@@ -102,6 +111,7 @@ namespace POS
       data_of_cashier.set_served = cashier.Served;
       data_of_cashier.set_Image = cashier.textImage;
       data_of_cashier.set_lastLogin = cashier.last_login;
+      data_of_cashier.set_birthDate = cashier.textBirthDate;
     }
     void SetInfoDrink()
     {
@@ -128,9 +138,44 @@ namespace POS
     {
       if (list_cashier.CurrentCell.ColumnIndex == 3)
       {
-        cashier = new addCashier();
-        cashier.ShowDialog();
+        selectedCashier(list_cashier.CurrentCell.RowIndex);
+        cashier = new addCashier(data_of_cashier.set_firstName, data_of_cashier.set_lastName, data_of_cashier.set_sex, data_of_cashier.set_birthDate,
+          data_of_cashier.set_Cashier_Login, data_of_cashier.set_password, data_of_cashier.set_age, data_of_cashier.set_Image);
+        result = cashier.ShowDialog();
+        if ( result == DialogResult.OK )
+        {
+          set_data_cashier();
+          Set_Info_Cashier_For_Display();
+          update_list_cashier();
+        }
       }
+      else if ( list_cashier.CurrentCell.ColumnIndex == 4 )
+      {
+        result = MessageBox.Show("Are you sure?", "", MessageBoxButtons.YesNo);
+        if ( result == DialogResult.Yes)
+        {
+          if (list_cashier.RowCount > 1)
+            list_cashier.Rows.RemoveAt(list_cashier.CurrentCell.RowIndex);
+          else
+            File.Delete(path);
+        }
+      }
+    }
+
+    private void list_cashier_SelectionChanged(object sender, EventArgs e)
+    {
+      //selectedCashier(list_cashier.CurrentCell.RowIndex);
+      data_of_cashier = new data_Cashier();
+    }
+    void selectedCashier(int index)
+    {
+      data_of_cashier = add_Cashier[index];
+      Set_Info_Cashier_For_Display();
+    }
+    void update_list_cashier()
+    {
+      list_cashier[1, list_cashier.CurrentRow.Index].Value = data_of_cashier.set_firstName + " " + data_of_cashier.set_lastName;
+      list_cashier[2, list_cashier.CurrentRow.Index].Value = data_of_cashier.set_Cashier_Login;
     }
   }
 }

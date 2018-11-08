@@ -122,7 +122,6 @@ namespace POS
             this.age.Location = new System.Drawing.Point(158, 113);
             this.age.MaxLength = 10;
             this.age.Name = "age";
-            this.age.PasswordChar = '✡';
             this.age.Size = new System.Drawing.Size(117, 20);
             this.age.TabIndex = 51;
             // 

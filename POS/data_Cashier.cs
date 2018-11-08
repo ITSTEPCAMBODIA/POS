@@ -19,6 +19,7 @@ namespace POS
     public string set_lastLogin { get; set; }
     public string set_sex { get; set; }
     public string set_Image { get; set; }
+    public string set_birthDate { get; set; }
     public data_Cashier ()
     {
     }
