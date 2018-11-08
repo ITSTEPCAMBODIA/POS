@@ -19,19 +19,19 @@ namespace POS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
-            Receipt R = new Receipt();
+            Application.Run(new POS.Satya.tbFoodPrice());
+            //Receipt R = new Receipt();
             // set logo
             //R.LogoImage = Image.FromFile(@"C:\Users\Public\Pictures\Sample Pictures\Desert.jpg");
             // set info
-            R.Infos["one"] = 123;
-            R.Infos["two"] = "asdfasd";
-            R.Infos["three"] = "faaoiwnsadfa";
+            //R.Infos["one"] = 123;
+            //R.Infos["two"] = "asdfasd";
+            //R.Infos["three"] = "faaoiwnsadfa";
             // set bills info
-            for (int i = 0; i < 5; i++)
-                R.Bills.Add(new Bill($"test {i}", i, 2.3));
+            //for (int i = 0; i < 5; i++)
+            //    R.Bills.Add(new Bill($"test {i}", i, 2.3));
             // show dialog
-            R.ShowDialog();
+            //R.ShowDialog();
             //Application.Run(R);
         }
     }
