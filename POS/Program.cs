@@ -19,7 +19,7 @@ namespace POS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new POS.Satya.tbFoodPrice());
+            Application.Run(new Form1());
             //Receipt R = new Receipt();
             // set logo
             //R.LogoImage = Image.FromFile(@"C:\Users\Public\Pictures\Sample Pictures\Desert.jpg");
