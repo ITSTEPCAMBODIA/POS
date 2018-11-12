@@ -36,18 +36,21 @@
             this.HomeBtn = new System.Windows.Forms.Button();
             this.AddDrinkBtn = new System.Windows.Forms.Button();
             this.DrinkPanel = new System.Windows.Forms.Panel();
+            this.LeftShiftBtn = new System.Windows.Forms.Button();
+            this.RightShiftBtn = new System.Windows.Forms.Button();
+            this.categoryPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // DownBtn
             // 
             this.DownBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.DownBtn.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.DownBtn.FlatAppearance.BorderSize = 2;
+            this.DownBtn.FlatAppearance.BorderSize = 3;
             this.DownBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DownBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DownBtn.Location = new System.Drawing.Point(0, 180);
+            this.DownBtn.Location = new System.Drawing.Point(1340, 190);
             this.DownBtn.Name = "DownBtn";
-            this.DownBtn.Size = new System.Drawing.Size(70, 70);
+            this.DownBtn.Size = new System.Drawing.Size(60, 60);
             this.DownBtn.TabIndex = 0;
             this.DownBtn.Text = "↓";
             this.DownBtn.UseVisualStyleBackColor = false;
@@ -60,9 +63,9 @@
             this.UpBtn.FlatAppearance.BorderSize = 3;
             this.UpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpBtn.Location = new System.Drawing.Point(1330, 180);
+            this.UpBtn.Location = new System.Drawing.Point(1340, 133);
             this.UpBtn.Name = "UpBtn";
-            this.UpBtn.Size = new System.Drawing.Size(70, 70);
+            this.UpBtn.Size = new System.Drawing.Size(60, 60);
             this.UpBtn.TabIndex = 1;
             this.UpBtn.Text = "↑";
             this.UpBtn.UseVisualStyleBackColor = false;
@@ -95,9 +98,9 @@
             this.HomeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.HomeBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.HomeBtn.FlatAppearance.BorderSize = 0;
-            this.HomeBtn.Location = new System.Drawing.Point(70, 180);
+            this.HomeBtn.Location = new System.Drawing.Point(1340, 0);
             this.HomeBtn.Name = "HomeBtn";
-            this.HomeBtn.Size = new System.Drawing.Size(70, 70);
+            this.HomeBtn.Size = new System.Drawing.Size(60, 60);
             this.HomeBtn.TabIndex = 2;
             this.HomeBtn.UseVisualStyleBackColor = false;
             // 
@@ -108,9 +111,9 @@
             this.AddDrinkBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddDrinkBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.AddDrinkBtn.FlatAppearance.BorderSize = 0;
-            this.AddDrinkBtn.Location = new System.Drawing.Point(1260, 180);
+            this.AddDrinkBtn.Location = new System.Drawing.Point(1340, 66);
             this.AddDrinkBtn.Name = "AddDrinkBtn";
-            this.AddDrinkBtn.Size = new System.Drawing.Size(70, 70);
+            this.AddDrinkBtn.Size = new System.Drawing.Size(60, 60);
             this.AddDrinkBtn.TabIndex = 3;
             this.AddDrinkBtn.UseVisualStyleBackColor = false;
             this.AddDrinkBtn.Click += new System.EventHandler(this.AddBtn_Clicked);
@@ -123,12 +126,52 @@
             this.DrinkPanel.Size = new System.Drawing.Size(1400, 824);
             this.DrinkPanel.TabIndex = 4;
             // 
+            // LeftShiftBtn
+            // 
+            this.LeftShiftBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.LeftShiftBtn.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.LeftShiftBtn.FlatAppearance.BorderSize = 3;
+            this.LeftShiftBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LeftShiftBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LeftShiftBtn.Location = new System.Drawing.Point(0, 179);
+            this.LeftShiftBtn.Name = "LeftShiftBtn";
+            this.LeftShiftBtn.Size = new System.Drawing.Size(80, 80);
+            this.LeftShiftBtn.TabIndex = 5;
+            this.LeftShiftBtn.Text = "<";
+            this.LeftShiftBtn.UseVisualStyleBackColor = false;
+            this.LeftShiftBtn.Click += new System.EventHandler(this.LeftShiftBtn_Click);
+            // 
+            // RightShiftBtn
+            // 
+            this.RightShiftBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.RightShiftBtn.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.RightShiftBtn.FlatAppearance.BorderSize = 3;
+            this.RightShiftBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RightShiftBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RightShiftBtn.Location = new System.Drawing.Point(1242, 179);
+            this.RightShiftBtn.Name = "RightShiftBtn";
+            this.RightShiftBtn.Size = new System.Drawing.Size(80, 80);
+            this.RightShiftBtn.TabIndex = 6;
+            this.RightShiftBtn.Text = ">";
+            this.RightShiftBtn.UseVisualStyleBackColor = false;
+            this.RightShiftBtn.Click += new System.EventHandler(this.RightShiftBtn_Click);
+            // 
+            // categoryPanel
+            // 
+            this.categoryPanel.Location = new System.Drawing.Point(86, 179);
+            this.categoryPanel.Name = "categoryPanel";
+            this.categoryPanel.Size = new System.Drawing.Size(1150, 80);
+            this.categoryPanel.TabIndex = 7;
+            // 
             // DrinkSelectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.categoryPanel);
+            this.Controls.Add(this.RightShiftBtn);
+            this.Controls.Add(this.LeftShiftBtn);
             this.Controls.Add(this.DrinkPanel);
             this.Controls.Add(this.AddDrinkBtn);
             this.Controls.Add(this.HomeBtn);
@@ -152,5 +195,8 @@
         private System.Windows.Forms.Button HomeBtn;
         private System.Windows.Forms.Button AddDrinkBtn;
         private System.Windows.Forms.Panel DrinkPanel;
+        private System.Windows.Forms.Button LeftShiftBtn;
+        private System.Windows.Forms.Button RightShiftBtn;
+        private System.Windows.Forms.Panel categoryPanel;
     }
 }

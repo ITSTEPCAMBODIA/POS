@@ -78,7 +78,7 @@ namespace POS
             {
                 XmlSerializer xml = new XmlSerializer(typeof(List<CategoryData>));
                 if (IsChangeCategory == false) throw new Exception("File not change");
-                using (FileStream file = new FileStream(Environment.CurrentDirectory + "\\Category.xml", FileMode.Create, FileAccess.Write))
+                using (FileStream file = new FileStream(Environment.CurrentDirectory + "..\\..\\..\\Data\\Category.xml", FileMode.Create, FileAccess.Write))
                 {
                     xml.Serialize(file, categories);
                 }
@@ -100,7 +100,7 @@ namespace POS
             XmlSerializer xml = new XmlSerializer(typeof(List<CategoryData>));
             try
             {
-                using(FileStream file = new FileStream(Environment.CurrentDirectory + "\\Category.xml", FileMode.Open, FileAccess.Read))
+                using(FileStream file = new FileStream(Environment.CurrentDirectory + "..\\..\\..\\Data\\Category.xml", FileMode.Open, FileAccess.Read))
                 {
                     categories = xml.Deserialize(file) as List<CategoryData>;
                 }
@@ -113,7 +113,7 @@ namespace POS
             xml = new XmlSerializer(typeof(List<DrinkInfo>));
             try
             {
-                using(FileStream file = new FileStream(Environment.CurrentDirectory + "\\Drinks.xml", FileMode.Open, FileAccess.Read))
+                using(FileStream file = new FileStream(Environment.CurrentDirectory + "..\\..\\..\\Data\\Drinks.xml", FileMode.Open, FileAccess.Read))
                 {
                     drinks = xml.Deserialize(file) as List<DrinkInfo>;
                 }
@@ -132,7 +132,7 @@ namespace POS
             {
             XmlSerializer xml = new XmlSerializer(typeof(List<CategoryData>));
                 if (IsChangeCategory == false) throw new Exception("File not change");
-                using (FileStream file = new FileStream(Environment.CurrentDirectory + "\\Category.xml", FileMode.Create, FileAccess.Write))
+                using (FileStream file = new FileStream(Environment.CurrentDirectory + "..\\..\\..\\Data\\Category.xml", FileMode.Create, FileAccess.Write))
                 {
                     xml.Serialize(file, categories);
                 }
@@ -176,7 +176,7 @@ namespace POS
                 drink.Note = txtNote.Text;
                 drink.Path = ImagePath;
                 drinks.Add(drink);
-                using (FileStream file = new FileStream(Environment.CurrentDirectory + "\\Drinks.xml", FileMode.Create, FileAccess.Write))
+                using (FileStream file = new FileStream(Environment.CurrentDirectory + "..\\..\\..\\Data\\Drinks.xml", FileMode.Create, FileAccess.Write))
                 {
                     xml.Serialize(file, drinks);
                 }

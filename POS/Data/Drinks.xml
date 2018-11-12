@@ -4,23 +4,81 @@
     <Code>001</Code>
     <Name>Americano</Name>
     <Category>HOT</Category>
-    <Price>23</Price>
+    <Price>2.3</Price>
+	<Path>C:\Users\SoSak\source\repos\POS\POS\Data\Images\Hot\Americano.jpg</Path>
     <Note>is very hot</Note>
+  </DrinkInfo>
+  <DrinkInfo>
+    <Code>002</Code>
+    <Name>Espresso</Name>
+    <Category>HOT</Category>
+    <Price>3.5</Price>
+	<Path>C:\Users\SoSak\source\repos\POS\POS\Data\Images\HOT\Espresso.jpg</Path>
+  </DrinkInfo>
+  <DrinkInfo>
+    <Code>002</Code>
+    <Name>Tea</Name>
+    <Category>HOT</Category>
+    <Price>3.25</Price>
+	<Path>C:\Users\SoSak\source\repos\POS\POS\Data\Images\HOT\Tea.jpg</Path>
+  </DrinkInfo>
+  <DrinkInfo>
+    <Code>002</Code>
+    <Name>Choco</Name>
+    <Category>HOT</Category>
+    <Price>2.25</Price>
+	<Path>C:\Users\SoSak\source\repos\POS\POS\Data\Images\HOT\Choco.jpg</Path>
+  </DrinkInfo>
+  <DrinkInfo>
+    <Code>002</Code>
+    <Name>Choco</Name>
+    <Category>HOT</Category>
+    <Price>2.25</Price>
+	<Path>C:\Users\SoSak\source\repos\POS\POS\Data\Images\HOT\Choco.jpg</Path>
+  </DrinkInfo>
+  <DrinkInfo>
+    <Code>002</Code>
+    <Name>CaramelMacchiato</Name>
+    <Category>HOT</Category>
+    <Price>2.50</Price>
+	<Path>C:\Users\SoSak\source\repos\POS\POS\Data\Images\HOT\CaramelMacchiato.jpg</Path>
+  </DrinkInfo>
+  <DrinkInfo>
+    <Code>002</Code>
+    <Name>Americano</Name>
+    <Category>COLD</Category>
+    <Price>2.3</Price>
+	<Path>C:\Users\SoSak\source\repos\POS\POS\Data\Images\Cold\Americano.jpg</Path>
+  </DrinkInfo>
+  <DrinkInfo>
+    <Code>002</Code>
+    <Name>Choco</Name>
+    <Category>COLD</Category>
+    <Price>3.3</Price>
+	<Path>C:\Users\SoSak\source\repos\POS\POS\Data\Images\Cold\Choco.jpg</Path>
+  </DrinkInfo>
+  <DrinkInfo>
+    <Code>002</Code>
+    <Name>Mocha</Name>
+    <Category>COLD</Category>
+    <Price>1.35</Price>
+	<Path>C:\Users\SoSak\source\repos\POS\POS\Data\Images\Cold\Mocha.jpg</Path>
   </DrinkInfo>
   <DrinkInfo>
     <Code>C001</Code>
     <Name>Latte</Name>
     <Category>COLD</Category>
     <Price>3.21</Price>
+	<Path>C:\Users\SoSak\source\repos\POS\POS\Data\Images\Cold\latte.jpg</Path>
     <Note />
   </DrinkInfo>
   <DrinkInfo>
     <Code>H002</Code>
-    <Name>latte</Name>
+    <Name>Latte</Name>
     <Category>HOT</Category>
     <Price>3.34</Price>
     <Note />
-    <Path>E:\PROJECT\DrinkSelections\DrinkSelections\Images\Caramel Latte.jpg</Path>
+    <Path>C:\Users\SoSak\source\repos\POS\POS\Data\Images\HOT\Latte.jpg</Path>
   </DrinkInfo>
   <DrinkInfo>
     <Code>F001</Code>
@@ -28,21 +86,21 @@
     <Category>Frappe</Category>
     <Price>3.25</Price>
     <Note />
-    <Path>C:\Users\SoSak\source\repos\POS\POS\bin\Debug\DrinkImg\Frappe\Caramel Frappe.jpg</Path>
+    <Path></Path>
   </DrinkInfo>
   <DrinkInfo>
     <Code>231</Code>
-    <Name>DRF</Name>
-    <Category>HOT</Category>
-    <Price>1</Price>
+    <Name>Caramel_Machiato</Name>
+    <Category>Cold</Category>
+    <Price>1.25</Price>
     <Note />
+	<Path>C:\Users\SoSak\source\repos\POS\POS\Data\Images\HOT\CaramelMacchiato.jpg</Path>
   </DrinkInfo>
   <DrinkInfo>
-    <Code>12</Code>
-    <Name>ESD</Name>
-    <Category>HOT</Category>
-    <Price>2</Price>
+    <Code>RD</Code>
+    <Name>FGJ</Name>
+    <Category>RYTD</Category>
+    <Price>12</Price>
     <Note />
-    <Path>C:\Users\SoSak\source\repos\POS\POS\bin\Debug\DrinkImg\Frappe\Caramel_Frappe.jpg</Path>
   </DrinkInfo>
 </ArrayOfDrinkInfo>

@@ -12,4 +12,8 @@
     <Code>003</Code>
     <Name>Frappe</Name>
   </CategoryData>
+  <CategoryData>
+    <Code>MHC</Code>
+    <Name>RYTD</Name>
+  </CategoryData>
 </ArrayOfCategoryData>
