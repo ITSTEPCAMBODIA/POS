@@ -91,7 +91,7 @@
             // HomeBtn
             // 
             this.HomeBtn.BackColor = System.Drawing.SystemColors.Control;
-            this.HomeBtn.BackgroundImage = global::POS.Properties.Resources.HomeButtonImg;
+            //this.HomeBtn.BackgroundImage = global::POS.Properties.Resources.HomeButtonImg;
             this.HomeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.HomeBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.HomeBtn.FlatAppearance.BorderSize = 0;
@@ -104,7 +104,7 @@
             // AddDrinkBtn
             // 
             this.AddDrinkBtn.BackColor = System.Drawing.SystemColors.Control;
-            this.AddDrinkBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddDrinkBtn.BackgroundImage")));
+            //this.AddDrinkBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddDrinkBtn.BackgroundImage")));
             this.AddDrinkBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddDrinkBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.AddDrinkBtn.FlatAppearance.BorderSize = 0;

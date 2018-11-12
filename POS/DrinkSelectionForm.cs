@@ -34,7 +34,7 @@ namespace POS
         List<DrinkInfo>[] DrinksInEachCategory;
         XmlSerializer Xml_Drink = new XmlSerializer(typeof(List<DrinkInfo>));
         XmlSerializer Xml_Category = new XmlSerializer(typeof(List<CategoryData>));
-
+        public event EventHandler AHandler;
         public void Get_DrinkData()
         {
             try
