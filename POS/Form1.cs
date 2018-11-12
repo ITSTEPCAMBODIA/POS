@@ -225,8 +225,8 @@ namespace POS
 
     private void list_cashier_Click(object sender, EventArgs e)
     {
-      clearSelected = true;
-      if (clearSelected == true) { list_cashier.ClearSelection(); }
+      //clearSelected = true;
+      //if (clearSelected == true) { list_cashier.ClearSelection(); }
     }
 
     private void list_cashier_CellClick(object sender, DataGridViewCellEventArgs e)
