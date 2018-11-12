@@ -58,9 +58,7 @@
     <Compile Include="addDrink.Designer.cs">
       <DependentUpon>addDrink.cs</DependentUpon>
     </Compile>
-    <Compile Include="addRemoveToXML.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="data_Drink.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -29,10 +29,11 @@ namespace POS
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.birthDate = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.age = new System.Windows.Forms.TextBox();
-            this.birthDate = new System.Windows.Forms.DateTimePicker();
+            this.birthDateButton = new System.Windows.Forms.DateTimePicker();
             this.sex = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -61,10 +62,11 @@ namespace POS
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.birthDate);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.age);
-            this.panel1.Controls.Add(this.birthDate);
+            this.panel1.Controls.Add(this.birthDateButton);
             this.panel1.Controls.Add(this.sex);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
@@ -92,6 +94,13 @@ namespace POS
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(588, 370);
             this.panel1.TabIndex = 0;
+            // 
+            // birthDate
+            // 
+            this.birthDate.Location = new System.Drawing.Point(158, 168);
+            this.birthDate.Name = "birthDate";
+            this.birthDate.Size = new System.Drawing.Size(93, 20);
+            this.birthDate.TabIndex = 54;
             // 
             // label15
             // 
@@ -124,15 +133,17 @@ namespace POS
             this.age.Name = "age";
             this.age.Size = new System.Drawing.Size(117, 20);
             this.age.TabIndex = 51;
+            this.age.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.age_KeyPress);
             // 
-            // birthDate
+            // birthDateButton
             // 
-            this.birthDate.CustomFormat = "";
-            this.birthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.birthDate.Location = new System.Drawing.Point(158, 168);
-            this.birthDate.Name = "birthDate";
-            this.birthDate.Size = new System.Drawing.Size(117, 20);
-            this.birthDate.TabIndex = 50;
+            this.birthDateButton.CustomFormat = "";
+            this.birthDateButton.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.birthDateButton.Location = new System.Drawing.Point(257, 168);
+            this.birthDateButton.Name = "birthDateButton";
+            this.birthDateButton.Size = new System.Drawing.Size(18, 20);
+            this.birthDateButton.TabIndex = 50;
+            this.birthDateButton.ValueChanged += new System.EventHandler(this.birthDateButton_ValueChanged);
             // 
             // sex
             // 
@@ -418,9 +429,10 @@ namespace POS
     private System.Windows.Forms.TextBox lastName;
     private System.Windows.Forms.Button button3;
     private System.Windows.Forms.ComboBox sex;
-    private System.Windows.Forms.DateTimePicker birthDate;
+    private System.Windows.Forms.DateTimePicker birthDateButton;
     private System.Windows.Forms.Label label15;
     private System.Windows.Forms.Label label14;
     private System.Windows.Forms.TextBox age;
+    private System.Windows.Forms.TextBox birthDate;
   }
 }

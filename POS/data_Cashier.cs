@@ -15,7 +15,6 @@ namespace POS
     public int set_served { get; set; }
     public string set_Cashier_Login { get; set; }
     public string set_password { get; set; }
-    public int set_id { get; set; }
     public string set_lastLogin { get; set; }
     public string set_sex { get; set; }
     public string set_Image { get; set; }

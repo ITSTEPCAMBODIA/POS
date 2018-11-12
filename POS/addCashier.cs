@@ -40,7 +40,7 @@ namespace POS
       firstName.Text = nameFirst;
       lastName.Text = nameLast;
       sex.Text = sexUser;
-      birthDate.Text = birth;
+      birthDateButton.Text = birth;
       login.Text = userlogin;
       passWord.Text = password;
       age.Text = ageUser;
@@ -63,20 +63,6 @@ namespace POS
     private void button2_Click(object sender, EventArgs e)
     {
       this.Close();
-      //XmlSerializer xml = new XmlSerializer(typeof(inFoEmployee));
-      //List<inFoEmployee> employee = new List<inFoEmployee>();
-      //FileStream repos = new FileStream("G:\\Employee.Xml", FileMode.Open, FileAccess.Read);
-      //Console.WriteLine(xml.Deserialize(repos) as List<inFoEmployee>);
-      //dataGridView1.DataSource = (List<inFoEmployee>)xml.Deserialize(repos);
-      //repos.Close();
-      //inFoEmployee emp = new inFoEmployee();
-      //while (read.Read())
-      //{
-      //  if (read.Name == "textLogin")
-      //  {
-      //    string str = read.ReadElementContentAsString();
-      //  }
-      //}
     }
 
     private void button1_Click(object sender, EventArgs e)
@@ -90,7 +76,7 @@ namespace POS
         textfirstname = firstName.Text;
         textLastname = lastName.Text;
         textSex = sex.Text;
-        textBirthDate = birthDate.Text;
+        textBirthDate = birthDateButton.Text;
         //Endline
         hired_Date = DateTime.Now.ToString("MM/dd/yyyy");
         textLogin = login.Text;
@@ -98,13 +84,28 @@ namespace POS
         Served = 0;
         User_age = age.Text;
         if (file.FileName != "") { textImage = file.FileName; }
-        DialogResult = DialogResult.OK;
         last_login = "";
+        DialogResult = DialogResult.OK;
         this.Close();
-        //employee.Add(info);
-        //xml.Serialize(CreateFile, info);
-        //CreateFile.Close();
       }
+    }
+
+    private void age_KeyPress(object sender, KeyPressEventArgs e)
+    {
+      Char chr = e.KeyChar;
+      if (Char.IsDigit(chr) == true || chr == 8)
+      {
+        e.Handled = false;
+      }
+      else
+      {
+        e.Handled = true;
+      }
+    }
+
+    private void birthDateButton_ValueChanged(object sender, EventArgs e)
+    {
+      birthDate.Text = birthDateButton.Text;
     }
   }
 }

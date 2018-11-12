@@ -121,6 +121,7 @@ namespace POS
             this.price.Name = "price";
             this.price.Size = new System.Drawing.Size(117, 20);
             this.price.TabIndex = 51;
+            this.price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.price_KeyPress);
             // 
             // category
             // 
@@ -155,6 +156,7 @@ namespace POS
             this.button2.TabIndex = 32;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 

@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<ArrayOfData_Cashier xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <data_Cashier>
-    <set_served>0</set_served>
-    <set_id>0</set_id>
-  </data_Cashier>
-</ArrayOfData_Cashier>
