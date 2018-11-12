@@ -15,6 +15,8 @@ namespace POS
 {
     public partial class AddDrinks : BaseForm
     {
+        public event EventHandler<EventDrink> onSave;
+        public event EventHandler<EventDrink> onCancel;
         List<CategoryData> categories = new List<CategoryData>();
         List<DrinkInfo> drinks = new List<DrinkInfo>();
         private bool IsChangeCategory = false;
@@ -91,6 +93,7 @@ namespace POS
                 MessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
             catch (Exception) { }
+            onCancel?.Invoke(this, new EventDrink { });
             this.Close();
         }
 
@@ -178,6 +181,7 @@ namespace POS
                 using (FileStream file = new FileStream(Environment.CurrentDirectory + "\\Drinks.xml", FileMode.Create, FileAccess.Write))
                 {
                     xml.Serialize(file, drinks);
+                    onSave?.Invoke(this, new EventDrink { newDrink = drink });
                 }
             }
             catch(ArgumentException ex)
@@ -199,5 +203,9 @@ namespace POS
         {
             pbDrink.BorderStyle = BorderStyle.FixedSingle;
         }
+    }
+    public class EventDrink : EventArgs
+    {
+        public DrinkInfo newDrink { get; set; }
     }
 }
